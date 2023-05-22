@@ -1,34 +1,13 @@
 ```bash
- /bin/bash /home/user/IdeaProjects/terraform-ydb-database-serverless/terraform_apply.sh
+/bin/bash /home/user/IdeaProjects/terraform-ydb-database-serverless/terraform_apply.sh
 
 Initializing the backend...
 
 Initializing provider plugins...
 - Finding latest version of hashicorp/aws...
 - Finding yandex-cloud/yandex versions matching "0.91.0"...
-- Installing hashicorp/aws v4.67.0...
-- Installed hashicorp/aws v4.67.0 (unauthenticated)
-- Installing yandex-cloud/yandex v0.91.0...
-- Installed yandex-cloud/yandex v0.91.0 (unauthenticated)
-
-Terraform has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.
-
-╷
-│ Warning: Incomplete lock file information for providers
-│ 
-│ Due to your customized provider installation methods, Terraform was forced to calculate lock file checksums locally for the following providers:
-│   - hashicorp/aws
-│   - yandex-cloud/yandex
-│ 
-│ The current .terraform.lock.hcl file only includes checksums for linux_amd64, so Terraform running on another platform will fail to install these providers.
-│ 
-│ To calculate additional checksums for another platform, run:
-│   terraform providers lock -platform=linux_amd64
-│ (where linux_amd64 is the platform to generate)
-╵
+- Using previously-installed yandex-cloud/yandex v0.91.0
+- Using previously-installed hashicorp/aws v4.67.0
 
 Terraform has been successfully initialized!
 
@@ -110,28 +89,6 @@ Changes to Outputs:
   + yandex_storage_bucket_ydb_access_key = (sensitive value)
   + yandex_storage_bucket_ydb_bucket     = (sensitive value)
   + yandex_storage_bucket_ydb_secret_key = (sensitive value)
-╷
-│ Warning: Argument is deprecated
-│ 
-│   with provider["registry.terraform.io/hashicorp/aws"],
-│   on main.tf line 14, in provider "aws":
-│   14:   skip_get_ec2_platforms      = true
-│ 
-│ With the retirement of EC2-Classic the skip_get_ec2_platforms attribute has been deprecated and will be removed in a future version.
-│ 
-│ (and one more similar warning elsewhere)
-╵
-╷
-│ Warning: Attribute Deprecated
-│ 
-│   with provider["registry.terraform.io/hashicorp/aws"],
-│   on main.tf line 14, in provider "aws":
-│   14:   skip_get_ec2_platforms      = true
-│ 
-│ With the retirement of EC2-Classic the skip_get_ec2_platforms attribute has been deprecated and will be removed in a future version.
-│ 
-│ (and one more similar warning elsewhere)
-╵
 ╷
 │ Error: configuring Terraform AWS Provider: no valid credential sources for Terraform AWS Provider found.
 │ 
