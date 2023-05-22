@@ -3,8 +3,6 @@ resource "yandex_ydb_database_serverless" "sections" {
 }
 
 provider "aws" {
-#  access_key                  = var.YC_SERVICE_ACCOUNT_STATIC_ACCESS_KEY
-#  secret_key                  = var.YC_SERVICE_ACCOUNT_STATIC_SECRET_KEY
   access_key                  = yandex_iam_service_account_static_access_key.ydb-sa-static-key.access_key
   secret_key                  = yandex_iam_service_account_static_access_key.ydb-sa-static-key.secret_key
   region                      = "ru-central1"
